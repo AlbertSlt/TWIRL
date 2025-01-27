@@ -3,23 +3,37 @@
   margin: 0;
   outline: 0;
   box-sizing: border-box;
+  background: none;
+}
+
+header {
+  height: 6rem;
+}
+
+header img {
+  margin: 0 2rem;
 }
 
 body {
-  min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+  min-height: 100vh;
+  /* Asegura que el fondo cubra toda la pantalla */
   margin: 0;
   background: #ffbcc5;
 }
+
 body .h1-index {
   text-align: center;
 }
+
 body .imagen-presentacion {
   display: flex;
 }
+
 body .imagen-presentacion img {
   margin: 0 auto;
   width: 60vw;
 }
+
 body .botones-registro {
   display: flex;
   justify-content: center;
@@ -33,13 +47,16 @@ body .botones-registro {
   align-items: center;
   padding: 0;
 }
-header{
+
+header {
   background: rgba(238, 123, 123, 0.768627451);
 }
-.container-fluid{
+
+.container-fluid {
   padding: 0;
   margin: 0;
 }
+
 .contenido-principal {
   background: #ffbcc5;
   min-height: 100vh;
@@ -52,39 +69,87 @@ header{
 .imagen-sidebar2 {
   width: 4vw;
 }
-.opciones{
+
+.opciones {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.form{
+.form {
   width: 35vw;
   display: flex;
   justify-content: space-between;
 }
 
-.card2{
+.container2 {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-cards {
   width: 100%;
+  display: flex;
+}
+
+button {
+  border: none;
+}
+
+.btn-like {
+  background-color: transparent;
+  width: 13vw;
+  height: auto;
+}
+
+
+
+.card2 {
+  width: 35vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.card2 img{
-  width: 60vh;
-} 
 
-.card2 h2{
+
+.card2 img {
+  width: 85%;
+  height: auto;
+}
+
+.card2 h2 {
   text-align: center;
 }
 
-.card2 p{
+.card2 p {
   font-size: 1.5em;
   text-align: center;
   font-style: italic;
+}
+
+@media (max-width: 780px) {
+  .container2 {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .card2 {
+    order: 1; 
+  }
+
+  .btn-like {
+    order: 2; 
+  }
+
+  .btn1 {
+    margin-bottom: 10px; 
+  }
 }
 
 

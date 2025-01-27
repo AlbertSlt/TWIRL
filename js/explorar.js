@@ -9,7 +9,7 @@ const perfiles = [
   {
     id: 2,
     nombre: "Tania Termidor",
-    descripcion: "El amor es una ilusion y yo soy ilusionista",
+    descripcion: "El amor es una ilusion y yo una ilusionista",
     imagen: "../images/perfiles/id2.jpg",
     genero: "femenino",
   },
@@ -22,7 +22,7 @@ const perfiles = [
   },
   {
     id: 4,
-    nombre: "Wara Nanda", 
+    nombre: "Horia, Susana",
     descripcion: "Los ultimos serán los primeros",
     imagen: "../images/perfiles/id4.jpg",
     genero: "femenino",
@@ -44,25 +44,26 @@ const perfiles = [
 ];
 
 
-
-document.querySelector('.opciones').addEventListener('change', function (event) {
+// generar un perfil aleatorio
+function generarPerfilAleatorio() {
   const opcionSeleccionada = document.querySelector('input[name="opcion"]:checked').value;
-  
   let perfilesFiltrados = [];
-  
-  if (opcionSeleccionada === '1') { // Hombres
+
+  if (opcionSeleccionada === '1') { //opc 1 Masc
     perfilesFiltrados = perfiles.filter(perfil => perfil.genero === 'masculino');
-  } else if (opcionSeleccionada === '2') { // Mujeres
+  } else if (opcionSeleccionada === '2') { //opc 2 Fem
     perfilesFiltrados = perfiles.filter(perfil => perfil.genero === 'femenino');
-  } else { // Sorprendeme!
-    perfilesFiltrados = perfiles;  
+  } else { 
+    perfilesFiltrados = perfiles;
   }
 
-  // Seleccionar un perfil aleatorio del array filtrado
   const perfilAleatorio = perfilesFiltrados[Math.floor(Math.random() * perfilesFiltrados.length)];
+    return perfilAleatorio;
+}
 
-  // Crear la tarjeta para el perfil aleatorio
-  const container = document.querySelector('.container-cards');
+// crear la tarjeta para el perfil aleatorio
+function crearTarjetaPerfil(perfilAleatorio) {
+  const container = document.querySelector('.card2');
   container.innerHTML = `
     <div class="card2">
       <h3>${perfilAleatorio.nombre}</h3>
@@ -70,111 +71,36 @@ document.querySelector('.opciones').addEventListener('change', function (event) 
       <p>${perfilAleatorio.descripcion}</p>
     </div>
   `;
+}
 
+// Evento de cambio para las opciones
+document.querySelector('.opciones').addEventListener('change', function () {
+  const perfilAleatorio = generarPerfilAleatorio();
+  crearTarjetaPerfil(perfilAleatorio);
 });
 
 
 
+// Botones
+document.querySelector('.btn1').addEventListener('click', function () {
+  const perfilAleatorio = generarPerfilAleatorio();
+  crearTarjetaPerfil(perfilAleatorio);
+});
+
+document.querySelector('.btn2').addEventListener('click', function () {
+  const perfilAleatorio = generarPerfilAleatorio();
+  crearTarjetaPerfil(perfilAleatorio);
+});
 
 
 
+// Cargar opción desde localStorage
+window.addEventListener('DOMContentLoaded', () => {
+  const opcionGuardada = localStorage.getItem('opcionSeleccionada');
 
-// //hacer un perfil aleatorio
-// const perfilAleatorio = perfiles[Math.floor(Math.random() * perfiles.length)];
-
-// //crear tarjeta del perfil aleatorio
-//   const CARD = document.createElement('div');
-
-//   CARD.classList.add('card2');
-
-// CARD.innerHTML = `
-  
-//   <h3>${perfilAleatorio.nombre}</h3>
-//   <img src="${perfilAleatorio.imagen}" alt="imagen de ${perfilAleatorio.nombre}">
-//   <p>${perfilAleatorio.descripcion}</p>
-// `;
-// //agregar la tarjeta al contenedor
-
-// const container = document.querySelector(`.container-cards`);
-// container.appendChild(CARD);
-
-
-
-
-
-
-
-
-
-// //crear tarjetas
-// perfiles.forEach((perfil) => {
-  
-//   const CARD = document.createElement('div');
-
-//   CARD.classList.add('card2')
-
-//   CARD.innerHTML = `
-//   <h3>${perfil.nombre}</h3>
-//   <img src="${perfil.imagen}" alt="imagen de ${perfil.nombre}">
-//   <p>${perfil.descripcion}</p>
-// `;
-
-//   const container = document.querySelector('.container-cards');
-//   container.appendChild(CARD);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//---------------------COPILOT---------------
-// perfiles.forEach((perfil) => {
-//   const tarjeta = document.createElement("div");
-//   tarjeta.className = "tarjeta";
-
-//   const img = document.createElement("img");
-//   img.src = perfil.imagen;
-//   img.alt = `Imagen de ${perfil.nombre}`;
-
-//   const nombre = document.createElement("h2");
-//   nombre.textContent = perfil.nombre;
-
-//   const descripcion = document.createElement("p");
-//   descripcion.textContent = perfil.descripcion;
-
-//   tarjeta.appendChild(img);
-//   tarjeta.appendChild(nombre);
-//   tarjeta.appendChild(descripcion);
-
-//   document.body.appendChild(tarjeta); // o el contenedor que elijas
-// });
+  if (opcionGuardada) {
+    const radio = document.querySelector(`input[value="${opcionGuardada}"]`);
+    radio.checked = true;
+    document.querySelector('.opciones').dispatchEvent(new Event('change'));
+  }
+});
