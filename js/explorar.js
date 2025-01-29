@@ -16,7 +16,7 @@ const perfiles = [
   {
     id: 3,
     nombre: "Filipo Filomeno",
-    descripcion: "Famoso filosofo de la Filarmonica",
+    descripcion: "Famoso filantropo de la Filarmonica",
     imagen: "../images/perfiles/id3.jpg",
     genero: "masculino",
   },
