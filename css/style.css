@@ -134,7 +134,7 @@ button {
 }
 
 @media (max-width: 780px) {
-  .container2 {
+  /* .container2 {
     flex-direction: column; 
     align-items: center;
   }
@@ -143,13 +143,34 @@ button {
     order: 1; 
   }
 
-  .btn-like {
-    order: 2; 
-  }
-
   .btn1 {
     margin-bottom: 10px; 
+    order: 2; 
   }
+  .btn2 {
+    margin-bottom: 10px; 
+    order: 3; 
+  } */
+
+
+
+    .container2 {
+        flex-direction: column; /* Elementos en columna */
+    }
+
+    .card2 {
+        order: 1; /* Tarjeta arriba */
+        width: 90%; /* Ancho ajustado */
+        margin-bottom: 20px; /* Espacio debajo de la tarjeta */
+    }
+
+    .btn1 {
+        order: 2; /* Botón 1 debajo de la tarjeta */
+    }
+
+    .btn2 {
+        order: 3; /* Botón 2 debajo del botón 1 */
+    }
 }
 
 

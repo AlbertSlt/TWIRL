@@ -65,21 +65,11 @@ function generarPerfilAleatorio() {
 function crearTarjetaPerfil(perfilAleatorio) {
   const container = document.querySelector('.card2');
   container.innerHTML = `
-    <div class="card2">
       <h3>${perfilAleatorio.nombre}</h3>
       <img src="${perfilAleatorio.imagen}" alt="imagen de ${perfilAleatorio.nombre}">
       <p>${perfilAleatorio.descripcion}</p>
-    </div>
   `;
 }
-
-// Evento de cambio para las opciones
-document.querySelector('.opciones').addEventListener('change', function () {
-  const perfilAleatorio = generarPerfilAleatorio();
-  crearTarjetaPerfil(perfilAleatorio);
-});
-
-
 
 // Botones
 document.querySelector('.btn1').addEventListener('click', function () {
@@ -92,6 +82,13 @@ document.querySelector('.btn2').addEventListener('click', function () {
   crearTarjetaPerfil(perfilAleatorio);
 });
 
+// Guardar opcion en LocalStorage
+document.querySelector('.opciones').addEventListener('change', function (event) {
+  const opcionSeleccionada = event.target.value;
+  localStorage.setItem('opcionSeleccionada', opcionSeleccionada); // Guardar en localStorage
+  const perfilAleatorio = generarPerfilAleatorio();
+  crearTarjetaPerfil(perfilAleatorio);
+});
 
 
 // Cargar opción desde localStorage
@@ -100,7 +97,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (opcionGuardada) {
     const radio = document.querySelector(`input[value="${opcionGuardada}"]`);
-    radio.checked = true;
-    document.querySelector('.opciones').dispatchEvent(new Event('change'));
+    if (radio) {
+      radio.checked = true;
+      const perfilAleatorio = generarPerfilAleatorio();
+      crearTarjetaPerfil(perfilAleatorio);
+    }
   }
 });
