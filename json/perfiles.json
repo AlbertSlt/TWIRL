@@ -1,0 +1,243 @@
+[
+    {
+      "id": 1,
+      "nombre": "Rigoberto Ramirez",
+      "descripcion": "Me gusta el arrrrte",
+      "imagen": "../images/perfiles/id1.jpg",
+      "genero": "masculino",
+      "edad": 35
+    },
+    {
+      "id": 2,
+      "nombre": "Tania Termidor",
+      "descripcion": "El amor es una ilusion y yo una ilusionista",
+      "imagen": "../images/perfiles/id2.jpg",
+      "genero": "femenino",
+      "edad": 28
+    },
+    {
+      "id": 3,
+      "nombre": "Filipo Filomeno",
+      "descripcion": "Famoso filantropo de la Filarmonica",
+      "imagen": "../images/perfiles/id3.jpg",
+      "genero": "masculino",
+      "edad": 45
+    },
+    {
+      "id": 4,
+      "nombre": "Horia, Susana",
+      "descripcion": "Los ultimos serán los primeros",
+      "imagen": "../images/perfiles/id4.jpg",
+      "genero": "femenino",
+      "edad": 55
+    },
+    {
+      "id": 5,
+      "nombre": "Jacinto Juarez",
+      "descripcion": "Con el microfono grande cualquiera es cantante",
+      "imagen": "../images/perfiles/id5.jpg",
+      "genero": "masculino",
+      "edad": 30
+    },
+    {
+      "id": 6,
+      "nombre": "D'Labuena, Ricarda",
+      "descripcion": "Es dura la vida del artista",
+      "imagen": "../images/perfiles/id6.jpg",
+      "genero": "femenino",
+      "edad": 40
+    },
+    {
+      "id": 7,
+      "nombre": "Alberto Perez",
+      "descripcion": "Siempre buscando nuevas aventuras",
+      "imagen": "../images/perfiles/id7.jpg",
+      "genero": "masculino",
+      "edad": 25
+    },
+    {
+      "id": 8,
+      "nombre": "Natalia Morante",
+      "descripcion": "Pasión por la fotografía y los viajes",
+      "imagen": "../images/perfiles/id8.jpg",
+      "genero": "femenino",
+      "edad": 33
+    },
+    {
+      "id": 9,
+      "nombre": "Ezequiel Gonzalez",
+      "descripcion": "Mente inquieta en busca de sabiduría",
+      "imagen": "../images/perfiles/id9.jpg",
+      "genero": "masculino",
+      "edad": 50
+    },
+    {
+      "id": 10,
+      "nombre": "Carolina Rivas",
+      "descripcion": "El arte de la paz comienza en el corazón",
+      "imagen": "../images/perfiles/id10.jpg",
+      "genero": "femenino",
+      "edad": 39
+    },
+    {
+      "id": 11,
+      "nombre": "Luis Enrique",
+      "descripcion": "El deporte es mi vida, siempre en movimiento",
+      "imagen": "../images/perfiles/id11.jpg",
+      "genero": "masculino",
+      "edad": 41
+    },
+    {
+      "id": 12,
+      "nombre": "Mariana Jimenez",
+      "descripcion": "Dedicada al cuidado del bienestar físico y mental",
+      "imagen": "../images/perfiles/id12.jpg",
+      "genero": "femenino",
+      "edad": 23
+    },
+    {
+      "id": 13,
+      "nombre": "Miguel Salazar",
+      "descripcion": "El futuro depende de lo que hagas hoy",
+      "imagen": "../images/perfiles/id13.jpg",
+      "genero": "masculino",
+      "edad": 29
+    },
+    {
+      "id": 14,
+      "nombre": "Gabriela Ortega",
+      "descripcion": "La vida es corta, no pierdas tiempo en cosas que no importan",
+      "imagen": "../images/perfiles/id14.jpg",
+      "genero": "femenino",
+      "edad": 31
+    },
+    {
+      "id": 15,
+      "nombre": "David Martínez",
+      "descripcion": "Emprendedor de corazón",
+      "imagen": "../images/perfiles/id15.jpg",
+      "genero": "masculino",
+      "edad": 37
+    },
+    {
+      "id": 16,
+      "nombre": "Laura Fernández",
+      "descripcion": "Creadora de sueños, convertidos en proyectos",
+      "imagen": "../images/perfiles/id16.jpg",
+      "genero": "femenino",
+      "edad": 47
+    },
+    {
+      "id": 17,
+      "nombre": "Carlos Morales",
+      "descripcion": "La música me hace sentir vivo",
+      "imagen": "../images/perfiles/id17.jpg",
+      "genero": "masculino",
+      "edad": 56
+    },
+    {
+      "id": 18,
+      "nombre": "Paola García",
+      "descripcion": "El teatro es mi vida, y si, somos una pareja",
+      "imagen": "../images/perfiles/id18.jpg",
+      "genero": "femenino",
+      "edad": 38
+    },
+    {
+      "id": 19,
+      "nombre": "Manuel Alvarado",
+      "descripcion": "Un poco de locura no le hace mal a nadie",
+      "imagen": "../images/perfiles/id19.jpg",
+      "genero": "masculino",
+      "edad": 44
+    },
+    {
+      "id": 20,
+      "nombre": "Isabel Cruz",
+      "descripcion": "Soy una persona que busca encontrar la paz",
+      "imagen": "../images/perfiles/id20.jpg",
+      "genero": "femenino",
+      "edad": 49
+    },
+    {
+      "id": 21,
+      "nombre": "Rafael Sánchez",
+      "descripcion": "La aventura comienza cuando sales de tu zona de confort",
+      "imagen": "../images/perfiles/id21.jpg",
+      "genero": "masculino",
+      "edad": 29
+    },
+    {
+      "id": 22,
+      "nombre": "Verónica Ruiz",
+      "descripcion": "Cuidando de los demás, y de mí misma",
+      "imagen": "../images/perfiles/id22.jpg",
+      "genero": "femenino",
+      "edad": 22
+    },
+    {
+      "id": 23,
+      "nombre": "Sergio Pérez",
+      "descripcion": "Mi pasión es la aventura y el senderismo",
+      "imagen": "../images/perfiles/id23.jpg",
+      "genero": "masculino",
+      "edad": 34
+    },
+    {
+      "id": 24,
+      "nombre": "Verónica Martínez",
+      "descripcion": "El teatro siempre me ha dado paz y claridad",
+      "imagen": "../images/perfiles/id24.jpg",
+      "genero": "femenino",
+      "edad": 65
+    },
+    {
+      "id": 25,
+      "nombre": "Fernando Sánchez",
+      "descripcion": "Un desafío es solo una oportunidad esperando ser tomada",
+      "imagen": "../images/perfiles/id25.jpg",
+      "genero": "masculino",
+      "edad": 61
+    },
+    {
+      "id": 26,
+      "nombre": "Natalia Lozano",
+      "descripcion": "Creando arte todos los días",
+      "imagen": "../images/perfiles/id26.jpg",
+      "genero": "femenino",
+      "edad": 70
+    },
+    {
+      "id": 27,
+      "nombre": "Julio Fernández",
+      "descripcion": "Siempre buscando ser mejor",
+      "imagen": "../images/perfiles/id27.jpg",
+      "genero": "masculino",
+      "edad": 57
+    },
+    {
+      "id": 28,
+      "nombre": "Silvia Rodríguez",
+      "descripcion": "La vida es lo que tú decides que sea",
+      "imagen": "../images/perfiles/id28.jpg",
+      "genero": "femenino",
+      "edad": 28
+    },
+    {
+      "id": 29,
+      "nombre": "Antonio Gutiérrez",
+      "descripcion": "La filosofía me ha cambiado la vida",
+      "imagen": "../images/perfiles/id29.jpg",
+      "genero": "masculino",
+      "edad": 18
+    },
+    {
+      "id": 30,
+      "nombre": "Estela García",
+      "descripcion": "La vida se mide por los momentos, no por los respiros",
+      "imagen": "../images/perfiles/id30.jpg",
+      "genero": "femenino",
+      "edad": 32
+    }
+  ]
+  

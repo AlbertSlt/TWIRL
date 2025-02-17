@@ -5,7 +5,18 @@
   box-sizing: border-box;
   background: none;
 }
+.uncial-antiqua-regular {
+  font-family: "Uncial Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.logotipo{
+  width: 30vw;
+}
+.logo-header{
+  width: 3vw;
+}
 header {
   height: 6rem;
 }
@@ -18,29 +29,27 @@ body {
   min-height: 100vh;
   /* Asegura que el fondo cubra toda la pantalla */
   margin: 0;
-  background: #ffbcc5;
+  /* background: #ffbcc5; */
 }
 
 body .h1-index {
   text-align: center;
 }
 
-body .imagen-presentacion {
+.imagen-presentacion {
   display: flex;
-}
-
-body .imagen-presentacion img {
   margin: 0 auto;
   width: 60vw;
 }
 
-body .botones-registro {
+
+body #botones-registro {
   display: flex;
   justify-content: center;
 }
 
 .sidebar {
-  background: rgba(238, 123, 123, 0.768627451);
+  background: #ee7b7bc4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -58,16 +67,8 @@ header {
 }
 
 .contenido-principal {
-  background: #ffbcc5;
+  background: #ffbcc521;
   min-height: 100vh;
-}
-
-.imagen-sidebar {
-  width: 100%;
-}
-
-.imagen-sidebar2 {
-  width: 4vw;
 }
 
 .opciones {
@@ -107,6 +108,9 @@ button {
 }
 
 
+.parrafos{
+  padding:  0 10vw;
+}
 
 .card2 {
   width: 35vw;
@@ -133,25 +137,12 @@ button {
   font-style: italic;
 }
 
-@media (max-width: 780px) {
-
-    .container2 {
-        flex-direction: column;
-    }
-
-    /*El orden no esta funcionando*/
-    .card2 {
-        order: 1; 
-        width: 90%; 
-        margin-bottom: 20px; 
-    }
-
-    .btn1 {
-        order: 2; 
-    }
-    .btn2 {
-        order: 3;
-    }
+.swal-gral{
+  border-radius: 10%;
+  border: 5px rgba(255, 0, 0, 0.347) solid;
+}
+.swal2-content{
+  font-size: 12rem !important;
 }
 
 
@@ -205,3 +196,36 @@ p {
       opacity: 1;
   }
 }
+
+
+@media (max-width: 780px) {
+
+  .container2 {
+      flex-direction: column;
+  }
+
+  /*El orden no esta funcionando*/
+  .card2 {
+      order: 1; 
+      width: 90%; 
+      margin-bottom: 20px; 
+  }
+
+  .btn1 {
+      order: 2; 
+  }
+  .btn2 {
+      order: 3;
+  }
+  .imagen-presentacion{
+    width: 80vw;
+  }
+  .logotipo{
+    width: 90vw;
+   } 
+  .logo-header{
+    width: 8vw;
+    margin: 1rem;
+  }
+}
+

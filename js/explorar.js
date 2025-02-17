@@ -1,51 +1,59 @@
-const perfiles = [
-  {
-    id: 1,
-    nombre: "Rigoberto Ramirez",
-    descripcion: "Me gusta el arrrrte",
-    imagen: "../images/perfiles/id1.jpg",
-    genero: "masculino",
-  },
-  {
-    id: 2,
-    nombre: "Tania Termidor",
-    descripcion: "El amor es una ilusion y yo una ilusionista",
-    imagen: "../images/perfiles/id2.jpg",
-    genero: "femenino",
-  },
-  {
-    id: 3,
-    nombre: "Filipo Filomeno",
-    descripcion: "Famoso filantropo de la Filarmonica",
-    imagen: "../images/perfiles/id3.jpg",
-    genero: "masculino",
-  },
-  {
-    id: 4,
-    nombre: "Horia, Susana",
-    descripcion: "Los ultimos serán los primeros",
-    imagen: "../images/perfiles/id4.jpg",
-    genero: "femenino",
-  },
-  {
-    id: 5,
-    nombre: "Jacinto Juarez",
-    descripcion: "Con el microfono grande cualquiera es cantante",
-    imagen: "../images/perfiles/id5.jpg",
-    genero: "masculino",
-  },
-  {
-    id: 6,
-    nombre: "D'Labuena, Ricarda",
-    descripcion: "Es dura la vida del artista",
-    imagen: "../images/perfiles/id6.jpg",
-    genero: "femenino",
-  },
-];
+let perfiles = [];
+function cargarPerfiles() {
+  return fetch('../json/perfiles.json')
+    .then(response => response.json())
+    .then(data => {
+      perfiles = data;
+    })
+    .catch(error => console.error('Error al cargar los perfiles: ', error));
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  cargarPerfiles().then(() => {
+
+    // Botones despues de cargar perfiles
+    document.querySelector('.btn1').addEventListener('click', function () {
+      const perfilAleatorio = generarPerfilAleatorio();
+      crearTarjetaPerfil(perfilAleatorio);
+    });
+
+    document.querySelector('.btn2').addEventListener('click', function () {
+      const perfilAleatorio = generarPerfilAleatorio();
+      crearTarjetaPerfil(perfilAleatorio);
+    });
+
+    // Guardar opcion en LocalStorage
+    document.querySelector('.opciones').addEventListener('change', function (event) {
+      const opcionSeleccionada = event.target.value;
+      localStorage.setItem('opcionSeleccionada', opcionSeleccionada); // Guardar en localStorage
+      const perfilAleatorio = generarPerfilAleatorio();
+      crearTarjetaPerfil(perfilAleatorio);
+    });
+
+
+    // Cargar opción desde localStorage
+    const opcionGuardada = localStorage.getItem('opcionSeleccionada');
+
+    if (opcionGuardada) {
+      const radio = document.querySelector(`input[value="${opcionGuardada}"]`);
+      if (radio) {
+        radio.checked = true;
+        const perfilAleatorio = generarPerfilAleatorio();
+        crearTarjetaPerfil(perfilAleatorio);
+      }
+    }
+  });
+});
+
 
 
 // generar un perfil aleatorio
 function generarPerfilAleatorio() {
+  if (perfiles.length === 0) { //si los perfiles no cargaron todavia, no hace nada
+    console.log('perfiles no cargados aún.')
+    return;
+  }
+
   const opcionSeleccionada = document.querySelector('input[name="opcion"]:checked').value;
   let perfilesFiltrados = [];
 
@@ -53,12 +61,12 @@ function generarPerfilAleatorio() {
     perfilesFiltrados = perfiles.filter(perfil => perfil.genero === 'masculino');
   } else if (opcionSeleccionada === '2') { //opc 2 Fem
     perfilesFiltrados = perfiles.filter(perfil => perfil.genero === 'femenino');
-  } else { 
+  } else {
     perfilesFiltrados = perfiles;
   }
 
   const perfilAleatorio = perfilesFiltrados[Math.floor(Math.random() * perfilesFiltrados.length)];
-    return perfilAleatorio;
+  return perfilAleatorio;
 }
 
 // crear la tarjeta para el perfil aleatorio
@@ -71,36 +79,48 @@ function crearTarjetaPerfil(perfilAleatorio) {
   `;
 }
 
-// Botones
-document.querySelector('.btn1').addEventListener('click', function () {
-  const perfilAleatorio = generarPerfilAleatorio();
-  crearTarjetaPerfil(perfilAleatorio);
-});
 
-document.querySelector('.btn2').addEventListener('click', function () {
-  const perfilAleatorio = generarPerfilAleatorio();
-  crearTarjetaPerfil(perfilAleatorio);
-});
+document.getElementById("btn1").addEventListener("click", () => {
+  Toastify({
+    text: "Feo con feo... Jamas funcionaría!",
+    duration: 3000,
+    close: true,
+    gravity: "top", 
+    position: "left",
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      cursor: "default", //no me gusta la manito
+    },
+    onClick: function () {
+      Swal.fire({
+        icon: "info",
+        title: "No es para enojarse!",
+        text: "Es solo una broma :)",
+        confirmButtonText: "Entiendo, los feos tenemos sentido del humor",
+        showCancelButton: false,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+      });
+     } 
+  }).showToast();
+})
 
-// Guardar opcion en LocalStorage
-document.querySelector('.opciones').addEventListener('change', function (event) {
-  const opcionSeleccionada = event.target.value;
-  localStorage.setItem('opcionSeleccionada', opcionSeleccionada); // Guardar en localStorage
-  const perfilAleatorio = generarPerfilAleatorio();
-  crearTarjetaPerfil(perfilAleatorio);
-});
 
 
-// Cargar opción desde localStorage
-window.addEventListener('DOMContentLoaded', () => {
-  const opcionGuardada = localStorage.getItem('opcionSeleccionada');
-
-  if (opcionGuardada) {
-    const radio = document.querySelector(`input[value="${opcionGuardada}"]`);
-    if (radio) {
-      radio.checked = true;
-      const perfilAleatorio = generarPerfilAleatorio();
-      crearTarjetaPerfil(perfilAleatorio);
-    }
-  }
-});
+document.getElementById("btn2").addEventListener("click", () => {
+  Toastify({
+    text: "Excelente elección! Sus hijos serán hermosos!",
+    duration: 3000,
+    close: true,
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      cursor: "default",
+    },
+    onClick: function () { } // Callback after click
+  }).showToast();
+})
