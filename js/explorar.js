@@ -85,16 +85,17 @@ document.getElementById("btn1").addEventListener("click", () => {
     text: "Feo con feo... Jamas funcionaría!",
     duration: 3000,
     close: true,
-    gravity: "top", 
+    gravity: "top",
     position: "left",
-    stopOnFocus: true, 
+    stopOnFocus: true,
     style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      background: "linear-gradient(to right, #d9534f, #c9302c",
       cursor: "default", //no me gusta la manito
     },
     onClick: function () {
       Swal.fire({
-        icon: "info",
+        icon: "warning",
+        iconColor: "red",
         title: "No es para enojarse!",
         text: "Es solo una broma :)",
         confirmButtonText: "Entiendo, los feos tenemos sentido del humor",
@@ -103,22 +104,20 @@ document.getElementById("btn1").addEventListener("click", () => {
         allowEscapeKey: false,
         allowEnterKey: false,
       });
-     } 
+    }
   }).showToast();
 })
-
-
 
 document.getElementById("btn2").addEventListener("click", () => {
   Toastify({
     text: "Excelente elección! Sus hijos serán hermosos!",
     duration: 3000,
     close: true,
-    gravity: "top", 
-    position: "right", 
-    stopOnFocus: true, 
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
     style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      background: "linear-gradient(to right, #28a745, #6dbf73)",
       cursor: "default",
     },
     onClick: function () { } // Callback after click

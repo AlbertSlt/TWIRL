@@ -56,9 +56,17 @@ body #botones-registro {
   justify-content: center;
 }
 
+.sidebar {
+  background: #ee7b7bc4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
 
 header {
-  background: #E1DFF7 ;
+  background: rgba(238, 123, 123, 0.768627451);
 }
 
 .container-fluid {
@@ -67,8 +75,7 @@ header {
 }
 
 .contenido-principal {
-  background: #FCFCED;
-  /* background: #ffbcc521; */
+  background: #ffbcc521;
   min-height: 100vh;
 }
 

@@ -119,7 +119,8 @@ document.getElementById('botones-registro').addEventListener('click', function (
       title: "Oops... El registro está desactivado",
       text: "Mejor comienza por explorar los candidatos en nuestra seccion Explorar",
       confirmButtonText: "EXPLORAR",
-      showCancelButton: true
+      showCancelButton: true,
+      
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.href = "./pages/explorar.html";
