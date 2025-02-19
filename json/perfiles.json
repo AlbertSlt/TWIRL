@@ -29,7 +29,7 @@
       "descripcion": "Los ultimos serán los primeros",
       "imagen": "../images/perfiles/id4.jpg",
       "genero": "femenino",
-      "edad": 55
+      "edad": 36
     },
     {
       "id": 5,
@@ -125,7 +125,7 @@
       "descripcion": "Creadora de sueños, convertidos en proyectos",
       "imagen": "../images/perfiles/id16.jpg",
       "genero": "femenino",
-      "edad": 47
+      "edad": 43
     },
     {
       "id": 17,
@@ -149,7 +149,7 @@
       "descripcion": "Un poco de locura no le hace mal a nadie",
       "imagen": "../images/perfiles/id19.jpg",
       "genero": "masculino",
-      "edad": 44
+      "edad": 54
     },
     {
       "id": 20,
@@ -157,7 +157,7 @@
       "descripcion": "Soy una persona que busca encontrar la paz",
       "imagen": "../images/perfiles/id20.jpg",
       "genero": "femenino",
-      "edad": 49
+      "edad": 40
     },
     {
       "id": 21,
@@ -177,8 +177,8 @@
     },
     {
       "id": 23,
-      "nombre": "Sergio Pérez",
-      "descripcion": "Mi pasión es la aventura y el senderismo",
+      "nombre": "Sr. Chow",
+      "descripcion": "Nada hiere a Chow. Yo soy invisible",
       "imagen": "../images/perfiles/id23.jpg",
       "genero": "masculino",
       "edad": 34

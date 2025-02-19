@@ -200,25 +200,31 @@ p {
 
 
 /* ------------------- MEDIA QUERYS -------------------*/
-
 @media (max-width: 780px) {
-
   .container2 {
-      flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "card card"
+      "btn1 btn2";
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
   }
-
-  /*El orden no esta funcionando*/
   .card2 {
-      order: 1; 
-      width: 90%; 
-      margin-bottom: 20px; 
+    grid-area: card;
+    width: 90%;
+    margin-bottom: 0;
   }
-
+  /* Asignamos grid-areas a cada botón utilizando sus clases individuales */
   .btn1 {
-      order: 2; 
+    grid-area: btn1;
+    width: 80%;
   }
   .btn2 {
-      order: 3;
+    grid-area: btn2;
+    width: 80%;
   }
   .imagen-presentacion{
     width: 80vw;

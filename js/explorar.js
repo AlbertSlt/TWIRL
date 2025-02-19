@@ -73,9 +73,9 @@ function generarPerfilAleatorio() {
 function crearTarjetaPerfil(perfilAleatorio) {
   const container = document.querySelector('.card2');
   container.innerHTML = `
-      <h3>${perfilAleatorio.nombre}</h3>
+      <h3>${perfilAleatorio.nombre} - ${perfilAleatorio.edad} años</h3>
       <img src="${perfilAleatorio.imagen}" alt="imagen de ${perfilAleatorio.nombre}">
-      <p>${perfilAleatorio.descripcion}</p>
+      <p>"${perfilAleatorio.descripcion}"</p>
   `;
 }
 
