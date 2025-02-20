@@ -5,28 +5,25 @@
   box-sizing: border-box;
   background: none;
 }
+
 .uncial-antiqua-regular {
   font-family: "Uncial Antiqua", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.header{
-  max-height: 5rem;
-}
-.logotipo{
-  width: 30vw;
-}
-.logotipo-explorar{
+.logotipo {
   width: 20vw;
+  margin-bottom: 1rem;
 }
 
+.logotipo-explorar {
+  width: 20vw;
+  margin-bottom: 1rem;
+}
 
-.logo-header{
+.logo-header {
   width: 2vw;
-}
-header {
-  height: 4rem;
 }
 
 header img {
@@ -34,10 +31,18 @@ header img {
 }
 
 body {
-  min-height: 100vh;
-  /* Asegura que el fondo cubra toda la pantalla */
+  min-height: 100%;
   margin: 0;
-  /* background: #ffbcc5; */
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 60vh;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: contain;
 }
 
 body .h1-index {
@@ -50,26 +55,14 @@ body .h1-index {
   width: 60vw;
 }
 
-
 body #botones-registro {
   display: flex;
   justify-content: center;
 }
 
-
-header {
-  background: #E1DFF7 ;
-}
-
 .container-fluid {
   padding: 0;
   margin: 0;
-}
-
-.contenido-principal {
-  background: #FCFCED;
-  /* background: #ffbcc521; */
-  min-height: 100vh;
 }
 
 .opciones {
@@ -86,7 +79,7 @@ header {
 }
 
 .container2 {
-  width: 100vw;
+  width: 100%;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -96,6 +89,7 @@ header {
 .container-cards {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 button {
@@ -108,23 +102,21 @@ button {
   height: auto;
 }
 
-
-.parrafos{
-  padding:  0 10vw;
+.parrafos {
+  padding: 0 10vw;
 }
 
 .card2 {
   width: 35vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
-
 .card2 img {
-  width: 85%;
+  width: 80%;
   height: auto;
 }
 
@@ -138,14 +130,14 @@ button {
   font-style: italic;
 }
 
-.swal-gral{
+.swal-gral {
   border-radius: 10%;
   border: 5px rgba(255, 0, 0, 0.347) solid;
 }
-.swal2-content{
+
+.swal2-content {
   font-size: 12rem !important;
 }
-
 
 ul {
   text-decoration: none;
@@ -157,7 +149,6 @@ p {
 }
 
 .cursi {
-  padding-top: 1em;
   text-align: center;
   font-style: italic;
 }
@@ -167,11 +158,14 @@ p {
   font-style: italic;
 }
 
+.parr {
+  text-align: center;
+  font-weight: bolder;
+}
+
 .footer {
   background: #a3a3a3;
 }
-
-
 
 .importante {
   font-size: 35px;
@@ -179,6 +173,7 @@ p {
   border: 2px black solid;
   animation: parpadeo 1s ease-in-out infinite;
 }
+
 .importante2 {
   font-size: 20px;
   color: #333;
@@ -188,54 +183,69 @@ p {
 
 @keyframes parpadeo {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
+
   50% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-
 /* ------------------- MEDIA QUERYS -------------------*/
 @media (max-width: 780px) {
+
   .container2 {
+    width: 100%;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
       "card card"
       "btn1 btn2";
     gap: 10px;
     justify-items: center;
     align-items: center;
+    min-width: 0;
   }
+
   .card2 {
     grid-area: card;
-    width: 90%;
+    width: 80%;
     margin-bottom: 0;
   }
-  /* Asignamos grid-areas a cada botón utilizando sus clases individuales */
+
   .btn1 {
     grid-area: btn1;
-    width: 80%;
+    width: 70%;
   }
+
   .btn2 {
     grid-area: btn2;
-    width: 80%;
+    width: 70%;
   }
-  .imagen-presentacion{
+
+  .imagen-presentacion {
     width: 80vw;
   }
-  .logotipo{
-    width: 90vw;
-   } 
 
-  .logo-header{
+  .logotipo {
+    width: 50vw;
+    margin-bottom: 1rem;
+  }
+
+  .logo-header {
     width: 3rem;
-    
+
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    height: 40vh;
   }
 }
 
