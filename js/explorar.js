@@ -94,10 +94,13 @@ document.getElementById("btn1").addEventListener("click", () => {
     },
     onClick: function () {
       Swal.fire({
-        icon: "warning",
+        //icon: "warning",
+        imageUrl: "../images/dae.png",
+        imageHeight: 270,
+
         iconColor: "red",
-        title: "No es para enojarse!",
-        text: "Es solo una broma :)",
+        title: "No es para enojarse",
+        text: "Es una broma :)",
         confirmButtonText: "Entiendo, los feos tenemos sentido del humor",
         showCancelButton: false,
         allowOutsideClick: false,

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "imagen": "./images/carousel/c1.jpg"
+    },
+    {
+        "id": 2,
+        "imagen": "./images/carousel/c2.jpg"
+    },
+    {
+        "id": 3,
+        "imagen": "./images/carousel/c3.jpg"
+    },
+    {
+        "id": 4,
+        "imagen": "./images/carousel/c4.jpg"
+    },
+    {
+        "id": 5,
+        "imagen": "./images/carousel/c5.jpg"
+    },
+    {
+        "id": 6,
+        "imagen": "./images/carousel/c6.jpg"
+    },
+    {
+        "id": 7,
+        "imagen": "./images/carousel/c7.jpg"
+    }
+]
