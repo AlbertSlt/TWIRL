@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     imageUrl: "../images/doc.png",
     imageHeight: 270,
     title: "Ay!",
-    text: "Esta página aún no está habilitada! Podrías hacer match contigo mismo, lo que causaría un error grave en la continuidad espacio-tiempo, alterando el curso de los eventos y poniendo en riesgo tu propia existencia!",
+    text: "Esta página aún no está habilitada! Podrías hacer match contigo mismo, lo que crearía una paradoja que podria reformar la continuidad de tiempo y espacio, alterando el curso de los eventos y poniendo en riesgo tu propia existencia!",
     confirmButtonText: "Gracias por salvar mi vida",
     customClass: {
       popup: 'swal-gral',          // estilo del contenedor
@@ -20,3 +20,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
