@@ -94,11 +94,8 @@ document.getElementById("btn1").addEventListener("click", () => {
     },
     onClick: function () {
       Swal.fire({
-        //icon: "warning",
         imageUrl: "../images/dae.png",
         imageHeight: 270,
-
-        iconColor: "red",
         title: "No es para enojarse",
         text: "Es una broma :)",
         confirmButtonText: "Entiendo, los feos tenemos sentido del humor",
@@ -123,6 +120,6 @@ document.getElementById("btn2").addEventListener("click", () => {
       background: "linear-gradient(to right, #28a745, #6dbf73)",
       cursor: "default",
     },
-    onClick: function () { } // Callback after click
+    onClick: function () { } //Callback
   }).showToast();
 })
